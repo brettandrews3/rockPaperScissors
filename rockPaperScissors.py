@@ -28,5 +28,13 @@ user_choice = input('What do you choose: rock, paper, or scissors?\n')
 # Print the choices...
 print('You chose', user_choice, 'and the computer chose', computer_choice + '.\n')
 
-if user_choice == computer_choice:
+if computer_choice == user_choice:
     winner = 'Tie'
+elif computer_choice == 'rock' and user_choice == 'scissors':
+    winner = 'Computer'
+elif computer_choice == 'paper' and user_choice == 'rock':
+    winner = 'Computer'
+elif computer_choice == 'scissors' and user_choice == 'paper':
+    winner = 'Computer'
+else:
+    winner = 'Player'
