@@ -56,5 +56,3 @@ elif winner == 'Player':
     print('I chose ' + computer_choice + ', and you chose ' + user_choice + '. Player wins!')
 else:
     print('Hmm. No one won that round. Let\'s try again.')
-
-# Super minor edit to trigger a git commit and push
