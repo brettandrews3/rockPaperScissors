@@ -26,8 +26,9 @@ else:
 user_choice = input('What do you choose: rock, paper, or scissors?\n')
 
 # Print the choices...
-print('You chose', user_choice, 'and the computer chose', computer_choice + '.\n')
+# print('You chose', user_choice, 'and the computer chose', computer_choice + '.\n')
 
+# Here's the winning conditions. If computer doesn't win and there's no tie, the Player wins.
 if computer_choice == user_choice:
     winner = 'Tie'
 elif computer_choice == 'rock' and user_choice == 'scissors':
@@ -38,3 +39,13 @@ elif computer_choice == 'scissors' and user_choice == 'paper':
     winner = 'Computer'
 else:
     winner = 'Player'
+
+# The winner statement is driven by the elif statements above, filling in both players' answers:
+if winner == 'Tie':
+    print('We both chose ', computer_choice + '. It\'s a Tie! Let\'s play again.')
+elif winner == 'Computer':
+    print('I chose ' + computer_choice + ', and you chose ' + user_choice + '. Computer wins!')
+elif winner == 'Player':
+    print('I chose ' + computer_choice + ', and you chose ' + user_choice + '. Player wins!')
+else:
+    print('Hmm. No one won that round. Let\'s try again.')
