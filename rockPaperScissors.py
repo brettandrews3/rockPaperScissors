@@ -2,14 +2,25 @@
 
 import random
 
-print('Welcome to Rock, Paper, Scissors.')
+print('Welcome to Rock, Paper, Scissors.\n')
 random_choice = random.randint(0,2)
 
-if random_choice == 0:
-    random_choice = 'Rock'
-elif random_choice == 1:
-    random_choice = 'Paper'
-elif random_choice == 2:
-    random_choice = 'Scissors'
+# Alternate randomizer:
+"""
+choices = ['rock', 'paper', 'scissors']
+random_choice = random.choice(choices)
+"""
 
-print('The computer chooses ', random_choice)
+# The computer makes its choice:
+if random_choice == 0:
+    random_choice = 'rock'
+elif random_choice == 1:
+    random_choice = 'paper'
+else:
+    random_choice = 'scissors'
+
+# Next, the user makes their choice:
+user_choice = input('What do you choose: rock, paper, or scissors?\n')
+
+# Print the choices...
+print('You chose', user_choice, 'and the computer chose', random_choice + '.')
