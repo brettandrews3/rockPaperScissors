@@ -25,6 +25,13 @@ else:
 # Next, the user makes their choice:
 user_choice = input('What do you choose: rock, paper, or scissors?\n')
 
+# This if statement catches any incorrect inputs from the user:
+if (user_choice != 'rock' and
+        user_choice != 'paper' and
+        user_choice != 'scissors'):
+    user_choice = input('What do you choose: rock, paper, or scissors?\n')
+print('Player chose ' + user_choice + '.\n')
+
 # Print the choices...
 # print('You chose', user_choice, 'and the computer chose', computer_choice + '.\n')
 
