@@ -2,8 +2,9 @@
 
 import random
 
-# This variable will hold the winner info later in the code.
+# This variable will hold the winner and user_choice info later in the code.
 winner = ''
+user_choice = ''
 
 print('Welcome to Rock, Paper, Scissors.\n')
 computer_choice = random.randint(0,2) # Keeps the computer to just 3 choices
@@ -26,10 +27,10 @@ else:
 user_choice = input('What do you choose: rock, paper, or scissors?\n')
 
 # This if statement catches any incorrect inputs from the user:
-if (user_choice != 'rock' and
+while (user_choice != 'rock' and
         user_choice != 'paper' and
         user_choice != 'scissors'):
-    user_choice = input('What do you choose: rock, paper, or scissors?\n')
+    user_choice = input("Let's try again: rock, paper, or scissors?\n")
 print('Player chose ' + user_choice + '.\n')
 
 # Print the choices...
@@ -56,3 +57,4 @@ elif winner == 'Player':
     print('I chose ' + computer_choice + ', and you chose ' + user_choice + '. Player wins!')
 else:
     print('Hmm. No one won that round. Let\'s try again.')
+
